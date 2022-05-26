@@ -1,4 +1,6 @@
-# yukaTut
+# yuka-threejs
+
+# based on:
 
 "Cloning And Animating Models Loaded From glTF Files - Three.js Tutorial" YouTube tutorial project files https://youtu.be/ohEtw-F1FR8
 
