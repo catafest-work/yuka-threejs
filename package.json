@@ -1,0 +1,23 @@
+{
+  "name": "yuka-threejs",
+  "version": "1.0.0",
+  "description": "\"Cloning And Animating Models Loaded From glTF Files - Three.js Tutorial\" YouTube tutorial project files https://youtu.be/ohEtw-F1FR8",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.139.2",
+    "yuka": "^0.7.7"
+  },
+  "devDependencies": {
+    "@parcel/config-default": "^2.4.0",
+    "parcel-reporter-static-files-copy": "^1.3.4"
+  },
+  "staticFiles": {
+    "staticOutPath": "assets"
+  }
+}
