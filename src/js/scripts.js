@@ -21,7 +21,7 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(0, 20, 0);
 camera.lookAt(scene.position);
 
-const vehicleGeometry = new THREE.ConeBufferGeometry(0.1, 0.5, 8);
+const vehicleGeometry = new THREE.ConeBufferGeometry(0.1, 0.5, 5);
 vehicleGeometry.rotateX(Math.PI * 0.5);
 const vehicleMaterial = new THREE.MeshNormalMaterial();
 const vehicleMesh = new THREE.Mesh(vehicleGeometry, vehicleMaterial);
@@ -37,22 +37,22 @@ function sync(entity, renderComponent) {
 }
 
 const path = new YUKA.Path();
-path.add( new YUKA.Vector3(-4, 0, 4));
-path.add( new YUKA.Vector3(-6, 0, 0));
+path.add( new YUKA.Vector3(-4, 0, 1));
+path.add( new YUKA.Vector3(-1, 0, 0));
 path.add( new YUKA.Vector3(-4, 0, -4));
 path.add( new YUKA.Vector3(0, 0, 0));
-path.add( new YUKA.Vector3(4, 0, -4));
-path.add( new YUKA.Vector3(6, 0, 0));
-path.add( new YUKA.Vector3(4, 0, 4));
-path.add( new YUKA.Vector3(0, 0, 6));
+path.add( new YUKA.Vector3(4, 0, -3));
+path.add( new YUKA.Vector3(5, 0, 0));
+path.add( new YUKA.Vector3(4, 0, 3));
+path.add( new YUKA.Vector3(0, 0, 3));
 
 path.loop = true;
 
 vehicle.position.copy(path.current());
 
-vehicle.maxSpeed = 3;
+vehicle.maxSpeed = 5;
 
-const followPathBehavior = new YUKA.FollowPathBehavior(path, 0.5);
+const followPathBehavior = new YUKA.FollowPathBehavior(path, 1.1);
 vehicle.steering.add(followPathBehavior);
 
 const onPathBehavior = new YUKA.OnPathBehavior(path);
